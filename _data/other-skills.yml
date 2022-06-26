@@ -1,0 +1,11 @@
+- name: AI algorithms
+  percentage: 85
+  color: info
+
+- name: Deep Learning
+  percentage: 85
+  color: 
+
+- name: Natural Language Processing
+  percentage: 70
+  color: success

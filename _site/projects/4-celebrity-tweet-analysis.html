@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Celebrity Tweet Emotion Analysis">
+  <meta property="og:description" content="Analysis of celebrity tweet emotions by using the method of clustering and topic generation using SentenceBert embeddings.">
+  <meta property="og:image" content="/images/twitter_emotion.svg">
+
+  <title>Celebrity Tweet Emotion Analysis</title>
+  <meta name="description" content="Analysis of celebrity tweet emotions by using the method of clustering and topic generation using SentenceBert embeddings.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Portfolio</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/about/">About</a>
+
+      <a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="the-project-was-developed-in-following-process">The project was developed in following process<br /></h1>
+<h3 id="dataset-selection">Dataset selection</h3>
+<p>Tweets Dataset - Top 20 most followed users in Twitter social platform https://dataverse.harvard.edu/dataset.xhtml?id=3047332 <br />
+I used this mostly because, number of tweets per person ration in the dataset was pretty high, which gives better clustering.</p>
+
+<h3 id="preprocessing-of-the-dataset">Preprocessing of the dataset<br /></h3>
+<ol>
+  <li>Filter out all the tweets, not in English, the language column of the dataset is used to accomplish this.</li>
+  <li>Removed URLs from all the files.</li>
+  <li>Replace the # and @ symbol with ‘’ because hashtag and mention could contain contextual info.</li>
+</ol>
+
+<h3 id="generating-embeddings-">Generating embeddings <br /></h3>
+<p>I have tried using a multiple sentence transformer to get the contextual embeddings of the tweet data, and further employed Uniform Manifold Approximation and Projection (UMAP) technique to reduce dimension and aid in visualizing the clusters of twitter emotions.
+Based on this clustering I was able to find choose the best sentence transformer for this task. (all-mpnet-base-v2 based on the results)<br /></p>
+<ol>
+  <li>Clustering in all-distilroberta-v1 embedding space
+<img src="/images/graph_1.png" alt="preview" /></li>
+  <li>Clustering in all-mpnet-base-v2 embedding space
+<img src="/images/graph_2.png" alt="preview" /></li>
+</ol>
+
+<h3 id="clustering-and-result">Clustering and result<br /></h3>
+<p>Finally, HDBSCAN technique was used on these generated contextual embeddings to get a high-density hierarchical clustering to get topic representation (in numbers). Furthermore, Gephi was used to create a network graph for the celeb to topic clustering graph.</p>
+
+<p><img src="/images/tweet.png" alt="preview" /></p>
+
+<p class="text-center">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/celeb-tweet-emotion-analysis">
+  Project repository
+</a>
+</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Pavan Kumar Raja</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:praja3@asu.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/Pavan-pk"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/pavan-kumar-novfourteen"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

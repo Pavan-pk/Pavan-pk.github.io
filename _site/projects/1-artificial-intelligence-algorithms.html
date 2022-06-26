@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI algorithms on Turtle Bot">
+  <meta property="og:description" content="Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.">
+  <meta property="og:image" content="/images/Reinforcement.png">
+
+  <title>AI algorithms on Turtle Bot</title>
+  <meta name="description" content="Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Portfolio</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/about/">About</a>
+
+      <a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="ai-algorithms-on-turtle-bot">AI algorithms on Turtle Bot</h1>
+<p>This is a 3 part project aimed at getting hands-on experience on each of the AI paradigms to learn using algorithms depending on the environments, agents, and tasks at hand.<br />
+I have used ROS melodic framework, which provides a virtual environment to test and visualize algorithms on robots (turtle bot in my case).
+The environment can be configured to have changes in observability, stochasticity, and environment changes concerning change in time.<br /></p>
+
+<h3 id="1-part---1-search">1. Part - 1: Search<br /></h3>
+<p>The environment is configured such that there are various obstacles at random locations, and there is a target that the turtle boot should reach from a random starting point. I evaluated search algorithms such as Breadth-First Search, Uniform Cost Search, Greedy Best First Search, and A-star (With manhattan and a variation of euclidean distance).<br />
+Evaluation of nodes expanded and time taken in each search for turtle bot to find the destination:
+<img src="/images/nodes.png" alt="preview" />
+<img src="/images/time.png" alt="preview" /></p>
+
+<h3 id="2-part---2-planning">2. Part - 2: Planning<br /></h3>
+<p>The environment chosen was bookWorld and cafeWorld and both worlds were find-pick-place with a size math criteria type of deterministic, fully observable, static environment. <br />
+In this part of the project, the development of common planning for both environments was defined using predicates, action, and goal states which reflects the state of both the state together.
+The learning objective was to a. Define actions and goals generically so that solutions can be extended to multiple environments. b. Refining higher-level actions into lower-level bot understandable action set.
+(PDDL files and code can be found in the repository.)</p>
+
+<h3 id="3-part---3-reinforcement-learning">3. Part - 3: Reinforcement learning<br /></h3>
+<p>The environment was configured such that it is partially observable, actions are stochastic and static.
+In this project, I have developed a program such that using a Q-learning algorithm, the program will give a set of optimal actions to be done in each belief state assumed by the robot. The environment also included reinforcement in terms of positive reward for successful execution of the action and negative reward for failure/ execution of invalid action. Furthermore, refinement of a higher-level action plan to a lower-level action plan using the best A-start search was added for maximum optimality.<br />
+The below graph shows the cumulative reward achieved for a particular episode during Q-learning by exploring the exploitation tradeoff on a logarithmic scale.
+<img src="/images/Qlearning.png" alt="preview" /></p>
+
+<p class="text-center">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/AI_algorithms">
+  Project repository
+</a>
+</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Pavan Kumar Raja</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:praja3@asu.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/Pavan-pk"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/pavan-kumar-novfourteen"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
