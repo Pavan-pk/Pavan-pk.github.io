@@ -14,7 +14,7 @@ Below are a few important topics that were unique to our project.
 ### 1. Secure web communication.<br>
 Along with employing normal web communication protocols to secure the communication between frontend-backend-DB and blockchain, we also employed an end-point encryption technology which would make deciphering of the payload impossible even if the raw payload is leaked/hijacked.
 Below is the sequence diagram to achieve this.
-![preview](/images/end_point.png)
+![preview](/images/end-point.png)
 
 
 ### 2. Block-chain Planning<br>
