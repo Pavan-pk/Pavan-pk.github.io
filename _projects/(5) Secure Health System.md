@@ -28,5 +28,5 @@ We used the NSL-KDD dataset to train a model capable of preventing malicious log
 
 
 <p class="text-center">
-{% include elements/button.html link="https://github.com/Pavan-pk/AI_algorithms" text="Project repository" %}
+{% include elements/button.html link="https://github.com/Pavan-pk/Secure-Health-System" text="Project repository" %}
 </p>
