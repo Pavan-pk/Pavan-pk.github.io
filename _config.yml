@@ -1,7 +1,9 @@
 ### Site Settings ###
 title               : Portfolio
-description         : >
-                      Curious and Zealous about everything related to Artificial Intelligence.
+description         : <p>Curious and Zealous about everything related to Artificial Intelligence.</p>
+                      <a href="{{ https://pavan-pk.github.io/about/}}">About | </a>
+                      <a href="{{ https://pavan-pk.github.io/projects/}}">Projects | </a>
+                      <a href="{{ https://github.com/Pavan-pk/resume/blob/6eb51c1d2487a15c2560346ea9a817f5c7e08732/Resume.pdf}}">Resume</a>
 baseurl             : ""# Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : Pavan-pk/Pavan-pk.github.io   # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
