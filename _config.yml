@@ -4,6 +4,8 @@ description         : <p>Curious and Zealous about everything related to Artific
                       <a href="https://pavan-pk.github.io/about/">About | </a>
                       <a href="https://pavan-pk.github.io/projects/">Projects | </a>
                       <a href="https://github.com/Pavan-pk/resume/blob/main/resume.pdf">Resume</a>
+                      <a href="https://www.linkedin.com/in/pavan-kumar-novfourteen/">LinkedIn</a>
+                      <a href="https://github.com/Pavan-pk">Github</a>
 baseurl             : ""# Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : Pavan-pk/Pavan-pk.github.io   # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
