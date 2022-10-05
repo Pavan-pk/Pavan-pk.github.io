@@ -3,30 +3,35 @@
   to: present
   description: I started my graduate studies thanks to my increasing curiosity towards Artificial Intelligence, <br>
                My course work includes Artificial Intelligence, Planning and learning in AI, Knowledge representation and reasoning in AI, Deep Learning, and Natural Language processing.<br>
-               I have also been a teaching assistant for a Deep learning graduate course at ASU.
-               My CGPA stands at 4.00, and I am graduating in Dec 2022.
+               I have also been a teaching assistant for a Deep learning course at ASU.
+               My CGPA stands at 3.94, and I am graduating in Dec 2022.
                (My projects are listed in the Projects tab)
 
-- title: Software Engineer - Individual Contributor, Motorola Mobility LLC
+- title: Software Engineer, Motorola Mobility LLC
   from: 2020
   to: 2021
-  description: "Team: Motorola Digital Account."<br>
-              * Drove and implemented endpoint encryption for 3-way web communication (client, server, partner).<br>
-              * Prototyped quick pay using camera and gesture for MDA application.<br>
-              * Built a security library on android for secured log storage and biometric authentication.<br>
+  description: I was an individual contributor to the Motorola Digital Account project. <br>
+               In this role, I was responsible for identifying key verticals, designing, prototyping, and developing components such as end-point encryption for web communication,
+               Hardware integration for quick pay and secure storage for user data. <br>
+               I mainly worked with ReactJS and Android in this role.
 
 - title: Software Engineer, Motorola Mobility LLC
   from: 2018
   to: 2020
-  description: "Team: Cloud Services." <br>
-              * Automated critical software updates by leveraging Motorola’s context awareness ML engine resulting in 98% security update uptake.<br>
-              * Led update generation architecture redesign and development, moved to object-oriented parallel processing architecture including support for multiple vendors and saving 30% in computational resources on build servers.<br> 
-              * Brought up virtual A/B updates on Motorola Android devices, reducing memory footprint by 40% and pushing OS uptake rate to 90%.<br>
-              * Built a suite of python scripts to analyze update layouts to aid in product design.<br>
+  description: During this period I was part of the Cloud services team. <br>
+               In this role<br>
+               1. I was a key contributor in bringing up Virtual A/B updates on Motorola products along with a suite of programs to increase efficiency in designing new products,
+               monitor upgrade performance, and analyze upgrade mechanics. This undertaking reduced the memory footprint reserved for updates by 40%. <br>
+               2. I led optimization of package generation software which included a complete overhaul of the design and development of the software from scratch,
+               resulting in the reduction of build time by more than 30% and saving more than 1000hrs on build servers. <br>
+               I was awarded MBG Bravo! award for my contributions in this role.
+               During this period, I primarily worked with Python and C++(to a little extent).
 
 - title: Associate Software Engineer, Motorola Mobility LLC
   from: 2016
   to: 2017
-  description: "Team: Update Services." <br>
-              * Brought up seamless software update architecture into Motorola update devices and reduced return device margin by 90% and increased OS update rate from 70% to 90%.<br> 
-              * Investigated and implemented package size reduction techniques to reduce cloud storage by 20%.<br>
+  description: During this period I was part of the Over-The-Air updates team. <br>
+               In this role, I played a major part in moving Motorola's update architecture to seamless update mechanics,
+               which pushed Motorola's OS update rate to 90%. <br>
+               In this role, I primarily worked with Python and C++(to a little extent).
+
