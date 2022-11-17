@@ -1,6 +1,6 @@
 ---
-name: AI algorithms on Turtle Bot
-tools: [Python, ROS melodic, Gazebo environment]
+name: AI planning with ROS
+tools: [Python, ROS melodic, Gazebo environment, PDDL]
 image: /images/Reinforcement.png
 description: Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.
 ---

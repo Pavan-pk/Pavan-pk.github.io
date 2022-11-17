@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI planning with ROS">
-  <meta property="og:description" content="Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.">
-  <meta property="og:image" content="/images/Reinforcement.png">
+  <meta property="og:title" content="AI - Planning domain design using PDDL">
+  <meta property="og:description" content="Designing various planning domains and actions sets for problems ranging from simple switches to logistics with durative constraints.">
+  <meta property="og:image" content="/images/PDDL_image.png">
 
-  <title>AI planning with ROS</title>
-  <meta name="description" content="Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.">
+  <title>AI - Planning domain design using PDDL</title>
+  <meta name="description" content="Designing various planning domains and actions sets for problems ranging from simple switches to logistics with durative constraints.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -71,32 +71,76 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="ai-algorithms-on-turtle-bot">AI algorithms on Turtle Bot</h1>
-<p>This is a 3 part project aimed at getting hands-on experience on each of the AI paradigms to learn using algorithms depending on the environments, agents, and tasks at hand.<br />
-I have used ROS melodic framework, which provides a virtual environment to test and visualize algorithms on robots (turtle bot in my case).
-The environment can be configured to have changes in observability, stochasticity, and environment changes concerning change in time.<br /></p>
+  <h1 id="ai---planning-domain-design-using-pddl">AI - Planning domain design using PDDL</h1>
+<p>This project involves designing the domain aswell as problem definition for switch and logistics problem with duration actions and minimum delivery time constraints.<br />
+I have used PDDL 2.1 to define the above mentioned parts of the project.<br /></p>
 
-<h3 id="1-part---1-search">1. Part - 1: Search<br /></h3>
-<p>The environment is configured such that there are various obstacles at random locations, and there is a target that the turtle boot should reach from a random starting point. I evaluated search algorithms such as Breadth-First Search, Uniform Cost Search, Greedy Best First Search, and A-star (With manhattan and a variation of euclidean distance).<br />
-Evaluation of nodes expanded and time taken in each search for turtle bot to find the destination:
-<img src="/images/nodes.png" alt="preview" />
-<img src="/images/time.png" alt="preview" /></p>
+<h3 id="problem-1---tricky-switch-domain">Problem 1 - Tricky switch domain</h3>
+<ul>
+  <li>A switch can be toggled.</li>
+  <li>There are 10 switches</li>
+  <li>The ten switches are in initial positions: {on, off, on, off, off, on, off, off, on, off}.</li>
+  <li>A switch can only be switched on if it has exactly one neighbour that is already on.<br />
+<br /></li>
+</ul>
 
-<h3 id="2-part---2-planning">2. Part - 2: Planning<br /></h3>
-<p>The environment chosen was bookWorld and cafeWorld and both worlds were find-pick-place with a size math criteria type of deterministic, fully observable, static environment. <br />
-In this part of the project, the development of common planning for both environments was defined using predicates, action, and goal states which reflects the state of both the state together.
-The learning objective was to a. Define actions and goals generically so that solutions can be extended to multiple environments. b. Refining higher-level actions into lower-level bot understandable action set.
-(PDDL files and code can be found in the repository.)</p>
+<h3 id="problem-2---basic-logistics-domain">Problem 2 - Basic logistics domain</h3>
+<p>Diagram below gives set of locations and paths.<br />
+<img src="/images/basic_logistics.png" alt="preview" /></p>
 
-<h3 id="3-part---3-reinforcement-learning">3. Part - 3: Reinforcement learning<br /></h3>
-<p>The environment was configured such that it is partially observable, actions are stochastic and static.
-In this project, I have developed a program such that using a Q-learning algorithm, the program will give a set of optimal actions to be done in each belief state assumed by the robot. The environment also included reinforcement in terms of positive reward for successful execution of the action and negative reward for failure/ execution of invalid action. Furthermore, refinement of a higher-level action plan to a lower-level action plan using the best A-start search was added for maximum optimality.<br />
-The below graph shows the cumulative reward achieved for a particular episode during Q-learning by exploring the exploitation tradeoff on a logarithmic scale.
-<img src="/images/Qlearning.png" alt="preview" /></p>
+<p>Actions: <br /></p>
+<ul>
+  <li>Packages can be loaded into and out of trucks (a driver does not have to be present).</li>
+  <li>Drivers can walk between connected locations.</li>
+  <li>Drivers can get into and out of trucks.</li>
+  <li>A truck with a driver inside can move between connected locations.<br /></li>
+</ul>
+
+<p>Objects:</p>
+<ul>
+  <li>Two drivers</li>
+  <li>Two trucks</li>
+  <li>Four packages</li>
+  <li>Eleven locations<br /></li>
+</ul>
+
+<p>Initial state:</p>
+<ul>
+  <li>The drivers are in locations {wp1, wp4}</li>
+  <li>The trucks are in locations {wp6, wp9}</li>
+  <li>The packages are in locations {wp2, wp3, wp5, wp11}</li>
+</ul>
+
+<p>Goal state:</p>
+<ul>
+  <li>Both drivers must be home in wp1.</li>
+  <li>The packages must be in their destination locations:</li>
+  <li>package 1 and 3 in location wp9</li>
+  <li>package 2 and 4 in location wp2<br />
+<br /></li>
+</ul>
+
+<h3 id="3-logistics-domain-with-durative-actions-and-timed-delivery-constraints">3. Logistics domain with durative actions and timed delivery constraints.</h3>
+<p>Below Diagram gives a description of the problem. <br />
+<img src="/images/Planning_domain.png" alt="preview" /></p>
+
+<p>Following were the addition to the basic logistics domain:</p>
+
+<ul>
+  <li>Packages can be loaded into and unloaded from trucks (10 time units).</li>
+  <li>Drivers can walk between connected waypoints (at a speed of 0.5).</li>
+  <li>Drivers can get into and out of trucks (10 time units).</li>
+  <li>Trucks with drivers can drive between connected waypoints (at a speed of 1).</li>
+  <li>The boat and the plane don’t need drivers to move.</li>
+  <li>They can only travel over the blue and yellow edges (connected to the lighthouse and the sky). Trucks can only travel on roads.</li>
+  <li>The boat travels at a speed of 1.5.</li>
+  <li>The plane travels at a speed of 2.<br />
+<br /></li>
+</ul>
 
 <p class="text-center">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/AI_algorithms">
-  Project repository
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/PDDL_planning">
+  Project repository with PDDL code and generated plans.
 </a>
 </p>
 

@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI planning with ROS">
-  <meta property="og:description" content="Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.">
-  <meta property="og:image" content="/images/Reinforcement.png">
+  <meta property="og:title" content="Data visualization">
+  <meta property="og:description" content="Designing and developing data visualization with transitions and interactions.">
+  <meta property="og:image" content="/images/data_viz_head.png">
 
-  <title>AI planning with ROS</title>
-  <meta name="description" content="Evaluation of AI algorithms (search, planning, reinforcement learning) on turtle bot for tasks in bookWorld and cafeWorld of gazebo environment.">
+  <title>Data visualization</title>
+  <meta name="description" content="Designing and developing data visualization with transitions and interactions.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -71,32 +71,38 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="ai-algorithms-on-turtle-bot">AI algorithms on Turtle Bot</h1>
-<p>This is a 3 part project aimed at getting hands-on experience on each of the AI paradigms to learn using algorithms depending on the environments, agents, and tasks at hand.<br />
-I have used ROS melodic framework, which provides a virtual environment to test and visualize algorithms on robots (turtle bot in my case).
-The environment can be configured to have changes in observability, stochasticity, and environment changes concerning change in time.<br /></p>
+  <h1 id="data-visualization">Data visualization</h1>
+<p>Designing and developing data visualization with transitions and interactions.</p>
 
-<h3 id="1-part---1-search">1. Part - 1: Search<br /></h3>
-<p>The environment is configured such that there are various obstacles at random locations, and there is a target that the turtle boot should reach from a random starting point. I evaluated search algorithms such as Breadth-First Search, Uniform Cost Search, Greedy Best First Search, and A-star (With manhattan and a variation of euclidean distance).<br />
-Evaluation of nodes expanded and time taken in each search for turtle bot to find the destination:
-<img src="/images/nodes.png" alt="preview" />
-<img src="/images/time.png" alt="preview" /></p>
+<h3 id="male-vs-female-employment-rate">Male vs Female employment rate</h3>
 
-<h3 id="2-part---2-planning">2. Part - 2: Planning<br /></h3>
-<p>The environment chosen was bookWorld and cafeWorld and both worlds were find-pick-place with a size math criteria type of deterministic, fully observable, static environment. <br />
-In this part of the project, the development of common planning for both environments was defined using predicates, action, and goal states which reflects the state of both the state together.
-The learning objective was to a. Define actions and goals generically so that solutions can be extended to multiple environments. b. Refining higher-level actions into lower-level bot understandable action set.
-(PDDL files and code can be found in the repository.)</p>
+<p>I have selected 5 interesting countries from the dataset shared in the project repo.<br />
+I have compared the contrast using line plot and different colors for female and male data.<br />
+<img src="/images/male_female.gif" alt="preview" />  <br /></p>
 
-<h3 id="3-part---3-reinforcement-learning">3. Part - 3: Reinforcement learning<br /></h3>
-<p>The environment was configured such that it is partially observable, actions are stochastic and static.
-In this project, I have developed a program such that using a Q-learning algorithm, the program will give a set of optimal actions to be done in each belief state assumed by the robot. The environment also included reinforcement in terms of positive reward for successful execution of the action and negative reward for failure/ execution of invalid action. Furthermore, refinement of a higher-level action plan to a lower-level action plan using the best A-start search was added for maximum optimality.<br />
-The below graph shows the cumulative reward achieved for a particular episode during Q-learning by exploring the exploitation tradeoff on a logarithmic scale.
-<img src="/images/Qlearning.png" alt="preview" /></p>
+<h3 id="text-corpus-viz">Text Corpus Viz</h3>
+<p>Given a text in the textbox,<br />
+The viz will plot pie chart depecting percentage of consonants, special characters and vowels.<br />
+Clicking on each pie will plot a bar chart showing distribution of each letter/symbol belonging to eacg pie category.<br />
+<img src="/images/text_corpus.gif" alt="preview" />  <br /></p>
+
+<h3 id="vizualization-of-global-development-indicies">Vizualization of Global development indicies.</h3>
+<p>Dataset - https://corgis-edu.github.io/corgis/csv/<br />
+The viz tries to plot the contrast of development across regions. This is a multiline graph to show development from 1980 to 2013, each line depicts a country.</p>
+
+<p>Interactions:</p>
+<ul>
+  <li>Allows selections of multiple regions, each region are associated with a color.</li>
+  <li>Allows to select/deselect all regions.</li>
+  <li>Allows to set the opacity of the graph, to reduce clutter</li>
+  <li>Allows to highlight a particular country by either hovering over line/endpoint/name associated with it.</li>
+  <li>Allows to show the slow animation through the time for selected regions.
+<img src="/images/global_dev.gif" alt="preview" />  <br /></li>
+</ul>
 
 <p class="text-center">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/AI_algorithms">
-  Project repository
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/Data-Vizualization">
+  Project repository.
 </a>
 </p>
 
