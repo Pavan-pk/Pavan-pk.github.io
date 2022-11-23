@@ -1,6 +1,10 @@
-- name: AI algorithms
+- name: AI learning
   percentage: 85
   color: info
+
+- name: Task planning
+  percentage: 90
+  color: danger
 
 - name: Deep Learning
   percentage: 85
