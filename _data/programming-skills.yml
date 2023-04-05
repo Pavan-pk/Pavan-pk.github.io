@@ -3,11 +3,11 @@
   color: danger
 
 - name: ReactJS/ JavaScript
-  percentage: 70
+  percentage: 75
   color: secondary
 
 - name: C++
-  percentage: 70
+  percentage: 60
   color: info
 
 - name: Pytorch

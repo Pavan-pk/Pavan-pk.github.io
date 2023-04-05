@@ -1,15 +1,11 @@
-- name: AI learning
+- name: Planning and Policy generation
   percentage: 85
   color: info
 
-- name: Task planning
-  percentage: 90
-  color: danger
-
-- name: Deep Learning
-  percentage: 85
+- name: Deep Learning in Visual computing.
+  percentage: 65
   color: 
 
 - name: Natural Language Processing
-  percentage: 70
+  percentage: 60
   color: success
