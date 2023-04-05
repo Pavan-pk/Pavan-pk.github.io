@@ -7,9 +7,8 @@ weight: 1
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}** :wave:,<br>
-I am a graduate student at ASU, pursuing MS in Computer Science with a specialization in Artificial Intelligence. My current interest lies in the use of AI techniques to solve real-world problems.<br>
-Previous to my graduate studies, I have amassed 5 experience in software engineering at Motorola Mobility across domains such as systems development, android development, web development, scripting, and ML. I have driven software solutions from conception to implementation that supports millions of users on daily basis.
+Hello, This is **{{ site.author.name }}** :wave:,<br>
+I am a seasoned software engineer with over 5 years of experience in building products which are consumed by millions of users. I am curiosity-driven, a self-starter, adept at learning new things, and have experience converting ideas into products. Further, I have earned MS with a specialization in AI. Currently, I am very passionate about applications of AI in planning and policy generation, and looking for opportunities to build and contribute to experiences that elevate my passion and have a positive impact all around.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
