@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Data visualization">
-  <meta property="og:description" content="Designing and developing data visualization with transitions and interactions.">
-  <meta property="og:image" content="/images/data_viz_head.png">
+  <meta property="og:title" content="Visual analysis of cloud computing performance using behavioral lines.">
+  <meta property="og:description" content="Visual analysis of cloud computing performance using behavioral lines.">
+  <meta property="og:image" content="/images/icon_cloud.jpeg">
 
-  <title>Data visualization</title>
-  <meta name="description" content="Designing and developing data visualization with transitions and interactions.">
+  <title>Visual analysis of cloud computing performance using behavioral lines.</title>
+  <meta name="description" content="Visual analysis of cloud computing performance using behavioral lines.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -72,36 +72,56 @@
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
   <h1 id="data-visualization">Data visualization</h1>
-<p>Designing and developing data visualization with transitions and interactions.</p>
+<p>Design and development of VA of Cloud computing performance</p>
 
-<h3 id="male-vs-female-employment-rate">Male vs Female employment rate</h3>
-
-<p>I have selected 5 interesting countries from the dataset shared in the project repo.<br />
-I have compared the contrast using line plot and different colors for female and male data.<br />
-<img src="/images/male_female.gif" alt="preview" />  <br /></p>
-
-<h3 id="text-corpus-viz">Text Corpus Viz</h3>
-<p>Given a text in the textbox,<br />
-The viz will plot pie chart depecting percentage of consonants, special characters and vowels.<br />
-Clicking on each pie will plot a bar chart showing distribution of each letter/symbol belonging to eacg pie category.<br />
-<img src="/images/text_corpus.gif" alt="preview" />  <br /></p>
-
-<h3 id="vizualization-of-global-development-indicies">Vizualization of Global development indicies.</h3>
-<p>Dataset - https://corgis-edu.github.io/corgis/csv/<br />
-The viz tries to plot the contrast of development across regions. This is a multiline graph to show development from 1980 to 2013, each line depicts a country.</p>
-
-<p>Interactions:</p>
+<h3 id="design">Design</h3>
 <ul>
-  <li>Allows selections of multiple regions, each region are associated with a color.</li>
-  <li>Allows to select/deselect all regions.</li>
-  <li>Allows to set the opacity of the graph, to reduce clutter</li>
-  <li>Allows to highlight a particular country by either hovering over line/endpoint/name associated with it.</li>
-  <li>Allows to show the slow animation through the time for selected regions.
-<img src="/images/global_dev.gif" alt="preview" />  <br /></li>
+  <li>Data: Cloud data of nodes from AWS</li>
+  <li>Stacked area chart: Visual for overall data.
+    <ul>
+      <li>A stack represent a single attribute.</li>
+      <li>x-axis: time</li>
+      <li>Brush: select time window for behavioral graph.</li>
+      <li>Hover for logs.</li>
+    </ul>
+  </li>
+  <li>Behavioral graph:
+    <ul>
+      <li>Control panel:
+        <ul>
+          <li>Select baseline node for force calculation.</li>
+          <li>Select attribute.</li>
+        </ul>
+      </li>
+      <li>Click for node logs at timestamp.</li>
+      <li>Brush: select lines to be plotted into detailed chart for all attributes. (4 selections allowed)</li>
+    </ul>
+  </li>
+  <li>Node line chart:
+    <ul>
+      <li>line graph with actual values.</li>
+      <li>Brush: select lines to be plotted into detailed chart for all attributes. (4 selections allowed)</li>
+    </ul>
+  </li>
+  <li>Detailed chart:
+    <ul>
+      <li>Line color: Represents selection</li>
+      <li>Clickable: popout and plot these lines into individual colors (each representing a node in selection.)</li>
+    </ul>
+  </li>
+  <li>Popout chart:
+    <ul>
+      <li>Disernable plot for each node in selection for the selection time.</li>
+    </ul>
+  </li>
 </ul>
 
+<h3 id="result">Result</h3>
+
+<p><img src="/images/cloud_result.png" alt="preview" />  <br /></p>
+
 <p class="text-center">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/Data-Vizualization">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/Behavior-lines-VA">
   Project repository
 </a>
 </p>

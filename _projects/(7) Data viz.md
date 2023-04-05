@@ -33,5 +33,5 @@ Interactions:
 ![preview](/images/global_dev.gif)  <br> 
 
 <p class="text-center">
-{% include elements/button.html link="https://github.com/Pavan-pk/Data-Vizualization" text="Project repository." %}
+{% include elements/button.html link="https://github.com/Pavan-pk/Data-Vizualization" text="Project repository" %}
 </p>

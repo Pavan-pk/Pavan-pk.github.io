@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Data visualization">
-  <meta property="og:description" content="Designing and developing data visualization with transitions and interactions.">
-  <meta property="og:image" content="/images/data_viz_head.png">
+  <meta property="og:title" content="RRT with visual heuristics">
+  <meta property="og:description" content="Designed path-finding RRT algorithm with heuristics based on a visual classifier.">
+  <meta property="og:image" content="/images/icon_rrt.gif">
 
-  <title>Data visualization</title>
-  <meta name="description" content="Designing and developing data visualization with transitions and interactions.">
+  <title>RRT with visual heuristics</title>
+  <meta name="description" content="Designed path-finding RRT algorithm with heuristics based on a visual classifier.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -71,37 +71,29 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="data-visualization">Data visualization</h1>
-<p>Designing and developing data visualization with transitions and interactions.</p>
+  <h1 id="rrt-with-visual-heuristics">RRT with visual heuristics</h1>
+<p>Designing and developing a path-finding RRT algorithm with heuristics based on a visual classifier.</p>
 
-<h3 id="male-vs-female-employment-rate">Male vs Female employment rate</h3>
-
-<p>I have selected 5 interesting countries from the dataset shared in the project repo.<br />
-I have compared the contrast using line plot and different colors for female and male data.<br />
-<img src="/images/male_female.gif" alt="preview" />  <br /></p>
-
-<h3 id="text-corpus-viz">Text Corpus Viz</h3>
-<p>Given a text in the textbox,<br />
-The viz will plot pie chart depecting percentage of consonants, special characters and vowels.<br />
-Clicking on each pie will plot a bar chart showing distribution of each letter/symbol belonging to eacg pie category.<br />
-<img src="/images/text_corpus.gif" alt="preview" />  <br /></p>
-
-<h3 id="vizualization-of-global-development-indicies">Vizualization of Global development indicies.</h3>
-<p>Dataset - https://corgis-edu.github.io/corgis/csv/<br />
-The viz tries to plot the contrast of development across regions. This is a multiline graph to show development from 1980 to 2013, each line depicts a country.</p>
-
-<p>Interactions:</p>
+<h3 id="problem-domain">Problem Domain</h3>
 <ul>
-  <li>Allows selections of multiple regions, each region are associated with a color.</li>
-  <li>Allows to select/deselect all regions.</li>
-  <li>Allows to set the opacity of the graph, to reduce clutter</li>
-  <li>Allows to highlight a particular country by either hovering over line/endpoint/name associated with it.</li>
-  <li>Allows to show the slow animation through the time for selected regions.
-<img src="/images/global_dev.gif" alt="preview" />  <br /></li>
+  <li>Domain is a 2D maze with obstacles the agent must go around to reach the goal.</li>
+  <li>Discrete action space - front, back, left, right, move, stop.</li>
+  <li>Different variants of domain include static/dynamic obstacles, start locations, and goal locations.</li>
 </ul>
 
+<h3 id="implementation">Implementation</h3>
+<ul>
+  <li>Expert trajectories are automatically generated for the image classifier.</li>
+  <li>Base RRT is run in a dynamic or static environment to find an expert trajectory.</li>
+  <li>Every step along this trajectory from start to goal, the picture of the environment is saved along with the action taken by the agent as training/test data for the image classifier neural network.</li>
+  <li>A CNN model is trained with this data to predict action from current state.</li>
+</ul>
+
+<h3 id="results">Results</h3>
+<p><img src="/images/rrt_results.png" alt="preview" />  <br /></p>
+
 <p class="text-center">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/Data-Vizualization">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Pavan-pk/RRT-with-visual-heuristics">
   Project repository
 </a>
 </p>
