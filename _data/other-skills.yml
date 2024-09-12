@@ -1,11 +1,11 @@
-- name: Planning and Policy generation
-  percentage: 85
-  color: info
+- name: Gen-AI, prompting & agents
+  percentage: 90
+  color: \
 
 - name: Deep Learning in Visual computing.
-  percentage: 65
-  color: 
+  percentage: 70
+  color: \
 
-- name: Natural Language Processing
-  percentage: 60
-  color: success
+- name: Planning and Policy generation
+  percentage: 70
+  color: \

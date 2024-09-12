@@ -1,9 +1,14 @@
-- title: Software Development Engineer, AWS.
+- title: SDE I/II, AWS.
   from: Feburary 2023
   to: present
-  description: Team - Frontier. <br>
-              - Built Dynamo db based feature flag for Frontier overlay territories using AWS lambda.<br>
-              - Built Feature flag based on AWS AppConfig for Frontier overlay territories.
+  description: Team - SMGS Frontier. <br>
+              - Led design and development Planning Advisor (Crystal AI), a 1P Generative AI based conversational assistant that will be primarily available in all SMGS Ops Sales Planning tools SPOG as a pluggable UI to address policy related questions, domain knowledge and planning tools applications specific insights.<br>
+              - Designed and developed Sales Hierarchy (SH) rule based user permissions to provide consistent permissions across the entire planning tools portfolio.<br>
+              - Automated Near Real-time revenue aggregations flow to the Revenue Management System.<br>
+              - Key contributor in building Crystal - a centralized platform for reviewing revenue information at the territory, customer, and account levels, with contributions across fullstack along with Implementation of ETL to bring in account, territory and customer level revenue data.<br>
+              - Implemented data sourcing ETL and processing for Sell-To and Sell-Through revenue assignments.<br>
+              - Built AWS revenue exception override logic in revenue aggregator rules to resolve conflicts between overlap of annual and current year planning.<br>
+
 
 
 - title: Graduate Student, Arizona State University
@@ -12,28 +17,23 @@
   description: MS in Computer Science with specilization in AI. <br>
                 Relevant coursework - Algorithms, System security, Planning and policy generation in AI, Deep learning, Natural language processing, Statistical machine learning, Robot learning in human-robot collaboration, Knowledge representation and reasoning in planning domain, and Data visualization.<br>
                 - Graduate Teaching Assistant for Deep Learning in computer vision - Spring 2022<br>
-                - Graduate Teaching Assistant for Software Security and Information Science - Fall 2022
+                - Graduate Teaching Assistant for Software Security and Information Science - Fall 2022<br>
 
-- title: Software Engineer, Motorola Mobility LLC
-  from: August 2020
+- title: Senior Software Engineer, Motorola Mobility LLC
+  from: Jan 2018
   to: July 2021
   description: Team - Motorola Digital Account.<br>
-              - Drove and implemented endpoint encryption for 3-way web communication (client, server, partner).<br>
-              - Prototyped quick pay using camera and gesture for MDA application.<br>
-              - Built a security library on android for secured log storage and biometric authentication.<br>
+                - Implemented endpoint encryption for secure 3-way web communication.<br>
+                - Prototyped a quick pay feature using camera and gestures, and developed a security library to secure biometric authentication info.<br>
+                - Automated software updates with Motorola’s ML engine, achieving 98% security update uptake.<br>
+                - Introduced virtual A/B updates on Moto devices, reducing memory usage by 40% and boosting OS update uptake from 70% to 90%.<br>
 
 - title: Software Engineer, Motorola Mobility LLC
-  from: Jan 2018
-  to: July 2020
-  description: Team - Cloud Services.<br>
-              - Automated critical software updates by leveraging Motorola’s context awareness ML engine resulting in 98% security update uptake.<br>
-              - Led update generation architecture redesign and development, moved to object-oriented parallel processing architecture including support for multiple vendors and saving 30% in computational resources on build servers.<br> 
-              - Brought up virtual A/B updates on Motorola Android devices, reducing memory footprint by 40% and pushing OS uptake rate to 90%.<br>
-              - Built a suite of python scripts to analyze update layouts to aid in product design.<br>
-
-- title: Associate Software Engineer, Motorola Mobility LLC
   from: July 2016
-  to: December 2017
-  description: Team - Update Services.<br>
+  to: Dec 2018
+  description: Team - Cloud Services.<br>
+              - Brought up seamless software update architecture into Motorola update devices reducing return device margin.<br>
+              - Redesigned update generation architecture with parallel processing, saving 30% in computational resources.<br>
+              - Built a suite of python scripts to analyze update layouts to aid in product design.<br>
               - Brought up seamless software update architecture into Motorola update devices and reduced return device margin by 90% and increased OS update rate from 70% to 90%.<br> 
               - Investigated and implemented package size reduction techniques to reduce cloud storage by 20%.<br>

@@ -1,16 +1,16 @@
 - name: Python
   percentage: 90
-  color: danger
+  color: \
 
 - name: ReactJS/ JavaScript
-  percentage: 75
-  color: secondary
+  percentage: 90
+  color: \
 
 - name: C++
   percentage: 60
-  color: info
+  color: \
 
 - name: Pytorch
   percentage: 70
-  color: success
+  color: \
 
